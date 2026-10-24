@@ -1,0 +1,20 @@
+# Build output
+**/node_modules/
+**/dist/
+**/bin/
+**/obj/
+**/.vs/
+**/TestResults/
+
+# Local settings and secrets
+*.user
+*.suo
+*.local
+.env
+.env.*
+!.env.example
+appsettings.Development.json
+appsettings.*.local.json
+
+# Logs
+*.log
