@@ -1,0 +1,92 @@
+#root {
+  min-height: 100vh;
+  overflow: clip;
+}
+
+.skip-link {
+  position: fixed;
+  top: -5rem;
+  left: 1rem;
+  z-index: 20;
+  padding: .7rem 1rem;
+  color: var(--bg);
+  background: var(--text);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.site-header {
+  width: min(100% - 64px, 1280px);
+  margin-inline: auto;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -.1em;
+}
+
+.site-nav a, .header-contact {
+  text-decoration: none;
+  font-size: .84rem;
+  font-weight: 650;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: .94rem 1.3rem;
+  min-height: 51px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: .85rem;
+  font-weight: 700;
+  transition: background .2s, color .2s, transform .2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  color: #081121;
+  background: #8eabff;
+  border-color: #8eabff;
+}
+
+.button-primary:hover {
+  background: #b8caff;
+}
+
+.button-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 990px) {
+  .site-header {
+    width: min(100% - 44px, 1280px);
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    width: min(100% - 36px, 1280px);
+  }
+}
