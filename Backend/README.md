@@ -4,14 +4,19 @@ ASP.NET Core API for `POST /api/contact`. It validates name, email, and message,
 
 ## Local setup
 
-Create a Formspree form and set its form ID in the environment. The ID is the part after `/f/` in the form URL. No API key or email credential is stored in this repository.
+Create a Formspree form and copy its form ID (the part after `/f/` in its endpoint URL). No API key is needed to submit messages. Put the ID in `appsettings.Contact.local.json`, which is ignored by Git:
+
+```json
+{ "FORMSPREE_FORM_ID": "YOUR_FORM_ID" }
+```
+
+Then run:
 
 ```powershell
-$env:FORMSPREE_FORM_ID = 'yourFormId'
 dotnet run --launch-profile http
 ```
 
-The frontend runs at `http://localhost:5173`. Without a Formspree ID, valid submissions return 503; invalid and honeypot submissions can still be checked locally. The direct email link remains available.
+If Visual Studio is already running the API, restart it after setting the ID. The frontend runs at `http://localhost:5173` and calls the API at `http://localhost:5032` by default. Without a Formspree ID, valid submissions return 503; invalid and honeypot submissions can still be checked locally. The direct email link remains available.
 
 For production, set `FORMSPREE_FORM_ID` and `CORS_ORIGIN` (the exact Vercel site origin, such as `https://example.vercel.app`) on Render. The Render Dockerfile and deployment steps belong to the final module.
 

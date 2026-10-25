@@ -2,6 +2,9 @@ using System.Threading.RateLimiting;
 using Portfolio.Backend;
 
 var builder = WebApplication.CreateBuilder(args);
+if (string.IsNullOrWhiteSpace(builder.Configuration["FORMSPREE_FORM_ID"]))
+    builder.Configuration.AddUserSecrets<Program>(optional: true);
+builder.Configuration.AddJsonFile("appsettings.Contact.local.json", optional: true);
 builder.WebHost.ConfigureKestrel(options => options.Limits.MaxRequestBodySize = 8 * 1024);
 
 var allowedOrigins = new List<string> { "http://localhost:5173", "http://127.0.0.1:5173" };
@@ -23,6 +26,9 @@ builder.Services.AddRateLimiter(options =>
 });
 
 var app = builder.Build();
+var configuredFormId = app.Configuration["FORMSPREE_FORM_ID"];
+app.Logger.LogInformation("Contact form configured: {Configured}; environment: {Environment}",
+    !string.IsNullOrWhiteSpace(configuredFormId) && System.Text.RegularExpressions.Regex.IsMatch(configuredFormId, "^[a-zA-Z0-9]+$"), app.Environment.EnvironmentName);
 app.UseCors("frontend");
 app.UseRateLimiter();
 
