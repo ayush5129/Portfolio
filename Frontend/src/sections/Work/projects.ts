@@ -61,5 +61,3 @@ export const projects: Project[] = [
     stack: [],
   },
 ]
-
-export const featuredProjects = projects.slice(0, 2)

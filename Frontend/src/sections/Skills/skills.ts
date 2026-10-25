@@ -24,4 +24,9 @@ export const skillGroups = [
     description: 'Working with version control, API testing, and development environments.',
     items: ['Git', 'GitHub', 'Postman', 'Visual Studio', 'VS Code', 'SendGrid'],
   },
+  {
+    title: 'Problem Solving',
+    description: 'A snapshot of my coding practice, badges, and certifications across four platforms.',
+    items: [],
+  },
 ]

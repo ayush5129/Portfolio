@@ -8,7 +8,7 @@ export function HeroSection() {
       <div className="hero-copy">
         <p className="eyebrow">Software developer / Backend focused</p>
         <HeroHeadline />
-        <p className="hero-intro">I’m Ayush Kumar Singh. I build reliable APIs and practical applications with ASP.NET Core, SQL Server, and modern web tools.</p>
+        <p className="hero-intro">I build reliable web applications for real business workflows—from ASP.NET Core APIs and SQL Server data to responsive interfaces.</p>
         <div className="hero-actions">
           <a className="button button-primary" href="/Ayush_Kumar_Singh_Resume.pdf" download>Download resume</a>
           <a className="button button-outline" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>

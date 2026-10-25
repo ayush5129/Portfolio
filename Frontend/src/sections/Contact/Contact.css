@@ -233,3 +233,72 @@
     grid-template-columns: 1fr;
   }
 }
+
+:root[data-theme='dark'] .contact-section {
+  color: var(--text);
+  background: radial-gradient(circle at 92% 20%, rgba(123, 72, 182, .2), transparent 36%), linear-gradient(180deg, #211832, #1a142c 58%, #181329);
+}
+
+:root[data-theme='dark'] .contact-kicker,
+:root[data-theme='dark'] .contact-direct > div > span,
+:root[data-theme='dark'] .contact-submit a {
+  color: #d7a9ff;
+}
+
+:root[data-theme='dark'] .contact-intro h2 span {
+  color: #ff92cb;
+}
+
+:root[data-theme='dark'] .contact-intro > p:not(.contact-kicker),
+:root[data-theme='dark'] .contact-form-heading p,
+:root[data-theme='dark'] .contact-submit span {
+  color: var(--muted);
+}
+
+:root[data-theme='dark'] .contact-direct,
+:root[data-theme='dark'] .contact-form {
+  border-color: var(--line);
+  background: #251d3d;
+}
+
+:root[data-theme='dark'] .contact-form {
+  box-shadow: 0 22px 55px rgba(7, 5, 22, .3);
+}
+
+:root[data-theme='dark'] .contact-direct a,
+:root[data-theme='dark'] .contact-form label {
+  color: var(--text);
+}
+
+:root[data-theme='dark'] .contact-direct a:hover {
+  color: #e2b9ff;
+}
+
+:root[data-theme='dark'] .contact-form input,
+:root[data-theme='dark'] .contact-form textarea {
+  border-color: var(--line);
+  color: var(--text);
+  background: #171329;
+}
+
+:root[data-theme='dark'] .contact-form input::placeholder,
+:root[data-theme='dark'] .contact-form textarea::placeholder {
+  color: #a99aba;
+}
+
+:root[data-theme='dark'] .contact-submit button {
+  border-color: #7441bb;
+  background: #7441bb;
+}
+
+:root[data-theme='dark'] .contact-submit button:hover {
+  background: #8e58d3;
+}
+
+:root[data-theme='dark'] .contact-feedback {
+  color: #8de5bb;
+}
+
+:root[data-theme='dark'] .contact-feedback.is-error {
+  color: #ff9faf;
+}

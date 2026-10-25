@@ -187,3 +187,51 @@
     transition: none;
   }
 }
+
+:root[data-theme='dark'] .about-section {
+  color: var(--text);
+  background: radial-gradient(circle at 90% 10%, rgba(117, 66, 174, .19), transparent 32%), #171329;
+}
+
+:root[data-theme='dark'] .about-kicker,
+:root[data-theme='dark'] .about-panel-heading div span,
+:root[data-theme='dark'] .about-link {
+  color: #d7a9ff;
+}
+
+:root[data-theme='dark'] .about-intro h2 span {
+  color: #ff92cb;
+}
+
+:root[data-theme='dark'] .about-intro > p:not(.about-kicker),
+:root[data-theme='dark'] .about-approach details p,
+:root[data-theme='dark'] .about-panel-note {
+  color: var(--muted);
+}
+
+:root[data-theme='dark'] .about-link {
+  border-color: #b77bec;
+}
+
+:root[data-theme='dark'] .about-panel {
+  border-color: var(--line);
+  background: #251d3d;
+  box-shadow: 0 24px 55px rgba(7, 5, 22, .28);
+}
+
+:root[data-theme='dark'] .about-approach details {
+  border-color: var(--line);
+}
+
+:root[data-theme='dark'] .about-approach summary {
+  color: var(--text);
+}
+
+:root[data-theme='dark'] .about-approach details[open] summary {
+  color: #dfb8ff;
+}
+
+:root[data-theme='dark'] .about-toggle {
+  color: #e8caff;
+  background: #3b2b5b;
+}

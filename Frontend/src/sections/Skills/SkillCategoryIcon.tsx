@@ -6,6 +6,7 @@ export function SkillCategoryIcon({ title }: { title: string }) {
       {title === 'Data' && <><path d="M4 20V13h3v7M10.5 20V8h3v12M17 20V4h3v16" /></>}
       {title === 'Foundations' && <><path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5" /></>}
       {title === 'Tools' && <><path d="M14.5 6.5a5 5 0 0 0-6 6L3 18a2 2 0 0 0 3 3l5.5-5.5a5 5 0 0 0 6-6L15 12l-3-3 2.5-2.5Z" /></>}
+      {title === 'Problem Solving' && <><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14" /></>}
     </svg>
   )
 }

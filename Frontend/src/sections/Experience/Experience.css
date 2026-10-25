@@ -131,6 +131,17 @@
   font-weight: 750;
 }
 
+a.experience-company {
+  width: fit-content;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a.experience-company:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 .experience-card-featured .experience-company {
   color: #e9b5f3;
 }
@@ -277,4 +288,76 @@
   .experience-toggle {
     transition: none;
   }
+}
+
+:root[data-theme='dark'] .experience-section {
+  color: var(--text);
+  background: radial-gradient(circle at 90% 10%, rgba(153, 78, 157, .18), transparent 34%), linear-gradient(160deg, #171329, #201830 58%, #1b152c);
+}
+
+:root[data-theme='dark'] .experience-kicker,
+:root[data-theme='dark'] .experience-company {
+  color: #d7a9ff;
+}
+
+:root[data-theme='dark'] .experience-intro h2 span {
+  color: #ff92cb;
+}
+
+:root[data-theme='dark'] .experience-intro > p:last-child,
+:root[data-theme='dark'] .experience-card-meta,
+:root[data-theme='dark'] .experience-summary,
+:root[data-theme='dark'] .experience-list {
+  color: var(--muted);
+}
+
+:root[data-theme='dark'] .experience-card {
+  border-color: var(--line);
+  background: #251d3d;
+  box-shadow: 0 16px 38px rgba(7, 5, 22, .26);
+}
+
+:root[data-theme='dark'] .experience-card-featured {
+  border-color: #7049ad;
+  background: radial-gradient(circle at 100% 0, rgba(200, 84, 170, .3), transparent 37%), linear-gradient(135deg, #312051, #4b2872);
+}
+
+:root[data-theme='dark'] .experience-card-featured .experience-company,
+:root[data-theme='dark'] .experience-card-featured .experience-card-meta,
+:root[data-theme='dark'] .experience-card-featured .experience-summary,
+:root[data-theme='dark'] .experience-card-featured .experience-list {
+  color: #f0e5fb;
+}
+
+:root[data-theme='dark'] .experience-card:hover {
+  box-shadow: 0 22px 48px rgba(7, 5, 22, .4);
+}
+
+:root[data-theme='dark'] .experience-card::before {
+  border-color: #171329;
+}
+
+:root[data-theme='dark'] .experience-summary {
+  border-color: var(--line);
+}
+
+:root[data-theme='dark'] .experience-toggle {
+  color: #e0b8ff;
+  background: #3b2b5b;
+}
+
+:root[data-theme='dark'] .experience-card-featured .experience-toggle {
+  color: #3b2563;
+  background: #ecd0f8;
+}
+
+:root[data-theme='dark'] .experience-tags li {
+  border-color: var(--line);
+  color: #e2d0f6;
+  background: #352a4c;
+}
+
+:root[data-theme='dark'] .experience-card-featured .experience-tags li {
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
 }

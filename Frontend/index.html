@@ -4,9 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b1220" />
-    <meta name="description" content="Ayush Kumar Singh is a software developer focused on ASP.NET Core, APIs, SQL Server, and practical full-stack products." />
-    <title>Ayush Kumar Singh — Software Developer</title>
+    <meta name="theme-color" content="#fff0e2" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('portfolio-theme')
+        const theme = savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = theme
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#141025' : '#fff0e2'
+      } catch {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+    <meta name="description" content="Ayush Kumar Singh builds reliable web applications for business workflows using ASP.NET Core, SQL Server, React, and Angular. Explore his projects and experience." />
+    <title>Ayush Kumar Singh | ASP.NET Core Developer</title>
   </head>
   <body>
     <div id="root"></div>

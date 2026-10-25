@@ -1,18 +1,32 @@
 :root {
   font-family: 'Segoe UI', Inter, Arial, sans-serif;
-  color: #f3f5f8;
-  background: #0b1220;
+  color: #21183e;
+  background: #fff0e2;
+  color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --bg: #0b1220;
-  --surface: #111d31;
-  --surface-strong: #17253a;
-  --text: #f3f5f8;
-  --muted: #a3b0c2;
-  --line: rgba(188, 203, 225, .18);
-  --accent: #6d91ff;
+  --bg: #fff0e2;
+  --surface: #fffafd;
+  --surface-strong: #f0e4fa;
+  --text: #21183e;
+  --muted: #5b526e;
+  --line: rgba(105, 73, 156, .2);
+  --accent: #6739b5;
   --mono: Consolas, 'Courier New', monospace;
+}
+
+:root[data-theme='dark'] {
+  color: #f7f0ff;
+  background: #141025;
+  color-scheme: dark;
+  --bg: #141025;
+  --surface: #211a39;
+  --surface-strong: #2b2247;
+  --text: #f7f0ff;
+  --muted: #c9bddb;
+  --line: rgba(224, 198, 255, .22);
+  --accent: #d5a9ff;
 }
 
 * {
@@ -54,8 +68,13 @@ a:focus-visible, button:focus-visible {
 }
 
 ::selection {
-  color: var(--bg);
-  background: #9db4ff;
+  color: #21183e;
+  background: #d8b8ff;
+}
+
+:root[data-theme='dark'] ::selection {
+  color: #fff;
+  background: #7547ad;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -12,7 +12,6 @@ export function ContactSection() {
           <div className="contact-direct">
             <span className="contact-direct-icon" aria-hidden="true">✉</span>
             <div>
-              <span>Prefer email?</span>
               <a href="mailto:ayushsinghmy7080@gmail.com">ayushsinghmy7080@gmail.com <span aria-hidden="true">↗</span></a>
             </div>
           </div>

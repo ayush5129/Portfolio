@@ -3,6 +3,8 @@ export const experiences = [
     company: 'inQmise Technologies India Pvt. Ltd.',
     role: 'Software Developer',
     period: 'Jul 2025 — Present',
+    location: 'On-site · Delhi',
+    companyUrl: 'https://inqmisetechnologies.com/',
     summary: 'Building and maintaining business applications across backend systems and full-stack features.',
     highlights: [
       'Develop production and legacy applications with C#, ASP.NET MVC, and ASP.NET Core Web API.',
