@@ -18,7 +18,7 @@ export function SiteHeader() {
   function toggleTheme() {
     const theme = darkTheme ? 'light' : 'dark'
     document.documentElement.dataset.theme = theme
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#141025' : '#fff0e2')
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0e131f' : '#f3f4f6')
     try { localStorage.setItem('portfolio-theme', theme) } catch { /* The switch still works when storage is unavailable. */ }
     setDarkTheme(theme === 'dark')
   }

@@ -1,8 +1,9 @@
 .contact-section {
+  border-top: 1px solid var(--line);
   padding: clamp(5rem, 8vw, 8rem) 32px;
   scroll-margin-top: 1rem;
-  color: #21183e;
-  background: radial-gradient(circle at 8% 85%, rgba(255, 169, 126, .29), transparent 32%), radial-gradient(circle at 92% 20%, rgba(193, 139, 237, .32), transparent 33%), linear-gradient(180deg, #f0e8f8, #fff2eb 58%, #f8e8f0);
+  color: var(--text);
+  background: var(--bg);
 }
 
 .contact-inner {
@@ -16,7 +17,7 @@
 
 .contact-kicker {
   margin: 0 0 1.1rem;
-  color: #6f45a3;
+  color: var(--accent);
   font: 700 .75rem var(--mono);
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -30,13 +31,13 @@
 }
 
 .contact-intro h2 span {
-  color: #cf398b;
+  color: var(--accent);
 }
 
 .contact-intro > p:not(.contact-kicker) {
   max-width: 460px;
   margin: 0;
-  color: #5a506f;
+  color: var(--muted);
   font-size: 1.04rem;
   line-height: 1.7;
 }
@@ -48,9 +49,15 @@
   max-width: 450px;
   margin-top: 2.5rem;
   padding: 1rem 1.1rem;
-  border: 1px solid rgba(105, 73, 156, .19);
-  border-radius: 17px;
-  background: rgba(255, 255, 255, .58);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+  transition: transform .2s ease;
+}
+
+.contact-direct:hover {
+  transform: translate(-2px, -2px);
 }
 
 .contact-direct-icon {
@@ -61,7 +68,7 @@
   flex: none;
   border-radius: 13px;
   color: white;
-  background: linear-gradient(135deg, #5931a2, #b24caa);
+  background: var(--brand);
   font-size: 1.4rem;
 }
 
@@ -101,10 +108,15 @@
   gap: 1.2rem;
   min-width: 0;
   padding: clamp(1.5rem, 3vw, 2.5rem);
-  border: 1px solid rgba(255, 255, 255, .85);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, .82);
-  box-shadow: 0 22px 55px rgba(91, 59, 112, .12);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+  transition: transform .2s ease;
+}
+
+.contact-form:hover {
+  transform: translate(-2px, -2px);
 }
 
 .contact-form-heading h3 {
@@ -146,8 +158,8 @@
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
-  border-color: #7038b5;
-  box-shadow: 0 0 0 3px rgba(112, 56, 181, .15);
+  border-color: #1e293b;
+  box-shadow: 3px 3px 0 #111827;
 }
 
 .contact-form textarea {
@@ -175,15 +187,18 @@
 }
 
 .contact-submit button {
-  border-color: #28174e;
-  border-radius: 10px;
+  border-color: #1e293b;
+  border-radius: 8px;
   color: #fff;
-  background: #28174e;
+  background: var(--brand);
+  box-shadow: 3px 3px 0 #111827;
+  font-weight: 700;
   cursor: pointer;
+  transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 
 .contact-submit button:hover {
-  background: #4c2680;
+  background: var(--brand-hover);
 }
 
 .contact-submit button:disabled {
@@ -236,17 +251,17 @@
 
 :root[data-theme='dark'] .contact-section {
   color: var(--text);
-  background: radial-gradient(circle at 92% 20%, rgba(123, 72, 182, .2), transparent 36%), linear-gradient(180deg, #211832, #1a142c 58%, #181329);
+  background: var(--bg);
 }
 
 :root[data-theme='dark'] .contact-kicker,
 :root[data-theme='dark'] .contact-direct > div > span,
 :root[data-theme='dark'] .contact-submit a {
-  color: #d7a9ff;
+  color: var(--accent);
 }
 
 :root[data-theme='dark'] .contact-intro h2 span {
-  color: #ff92cb;
+  color: var(--accent);
 }
 
 :root[data-theme='dark'] .contact-intro > p:not(.contact-kicker),
@@ -257,12 +272,9 @@
 
 :root[data-theme='dark'] .contact-direct,
 :root[data-theme='dark'] .contact-form {
-  border-color: var(--line);
-  background: #251d3d;
-}
-
-:root[data-theme='dark'] .contact-form {
-  box-shadow: 0 22px 55px rgba(7, 5, 22, .3);
+  border-color: var(--card-border);
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
 }
 
 :root[data-theme='dark'] .contact-direct a,
@@ -278,7 +290,13 @@
 :root[data-theme='dark'] .contact-form textarea {
   border-color: var(--line);
   color: var(--text);
-  background: #171329;
+  background: var(--surface-strong);
+}
+
+:root[data-theme='dark'] .contact-form input:focus,
+:root[data-theme='dark'] .contact-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 3px 3px 0 #111827;
 }
 
 :root[data-theme='dark'] .contact-form input::placeholder,
@@ -287,12 +305,13 @@
 }
 
 :root[data-theme='dark'] .contact-submit button {
-  border-color: #7441bb;
-  background: #7441bb;
+  border-color: #1e293b;
+  background: var(--brand);
 }
 
 :root[data-theme='dark'] .contact-submit button:hover {
-  background: #8e58d3;
+  background: var(--brand-hover);
+  box-shadow: 0 0 24px rgba(158, 100, 232, .45);
 }
 
 :root[data-theme='dark'] .contact-feedback {

@@ -9,7 +9,7 @@ assert.ok(bootstrap, 'theme bootstrap runs before the app script')
 
 function initialTheme(saved, systemDark, storageFails = false) {
   const documentElement = { dataset: {} }
-  const themeColor = { content: '#fff0e2' }
+  const themeColor = { content: '#0e131f' }
   runInNewContext(bootstrap, {
     document: { documentElement, querySelector: () => themeColor },
     localStorage: { getItem: () => {
@@ -22,12 +22,13 @@ function initialTheme(saved, systemDark, storageFails = false) {
 }
 
 test('saved theme takes priority over the system preference', () => {
-  assert.deepEqual(initialTheme('dark', false), { theme: 'dark', color: '#141025' })
-  assert.deepEqual(initialTheme('light', true), { theme: 'light', color: '#fff0e2' })
+  assert.deepEqual(initialTheme('dark', false), { theme: 'dark', color: '#0e131f' })
+  assert.deepEqual(initialTheme('light', true), { theme: 'light', color: '#f3f4f6' })
 })
 
-test('system preference is used until a valid choice is saved', () => {
-  assert.deepEqual(initialTheme(null, true), { theme: 'dark', color: '#141025' })
-  assert.deepEqual(initialTheme('invalid', false), { theme: 'light', color: '#fff0e2' })
-  assert.deepEqual(initialTheme(null, true, true), { theme: 'light', color: '#fff0e2' })
+test('dark is the default regardless of system preference or unavailable storage', () => {
+  assert.deepEqual(initialTheme(null, true), { theme: 'dark', color: '#0e131f' })
+  assert.deepEqual(initialTheme(null, false), { theme: 'dark', color: '#0e131f' })
+  assert.deepEqual(initialTheme('invalid', false), { theme: 'dark', color: '#0e131f' })
+  assert.deepEqual(initialTheme(null, false, true), { theme: 'dark', color: '#0e131f' })
 })
