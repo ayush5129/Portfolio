@@ -1,6 +1,6 @@
 @Backend_HostAddress = http://localhost:5032
 
-GET {{Backend_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{Backend_HostAddress}}/api/contact
+Content-Type: application/json
 
-###
+{"name":"Ayush","email":"person@example.com","message":"Hello, I would like to talk about a project.","website":""}
